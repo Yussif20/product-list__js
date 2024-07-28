@@ -1,0 +1,121 @@
+:root {
+  --color-red: hsl(14, 86%, 42%);
+  --color-green: hsl(159, 69%, 38%);
+  --color-rose-50: hsl(20, 50%, 98%);
+  --color-rose-100: hsl(13, 31%, 94%);
+  --color-rose-300: hsl(14, 25%, 72%);
+  --color-rose-400: hsl(7, 20%, 60%);
+  --color-rose-500: hsl(12, 20%, 44%);
+  --color-rose-600: hsl(14, 65%, 9%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 400;
+  background-color: var(--color-rose-100);
+}
+
+.container {
+  padding: 3rem 0;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dessert__container h1 {
+  color: var(--color-rose-600);
+  margin: 1.2rem 0;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.dessert__container-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  -moz-column-gap: 1.4rem;
+       column-gap: 1.4rem;
+  row-gap: 3rem;
+}
+.dessert__container-items .item {
+  display: flex;
+  flex-direction: column;
+}
+.dessert__container-items .item img {
+  border-radius: 1.2rem;
+  width: 25rem;
+}
+.dessert__container-items .item button {
+  font-weight: 600;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid var(--color-rose-400);
+  border-radius: 5rem;
+  padding: 0.8rem 1.6rem;
+  margin: 0 auto;
+  width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  transition: 0.3s ease-in-out;
+}
+.dessert__container-items .item button:hover {
+  background-color: var(--color-rose-50);
+}
+.dessert__container-items .item button img {
+  width: 2rem;
+  height: 2rem;
+}
+.dessert__container-items .item h4 {
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  color: var(--color-rose-400);
+}
+.dessert__container-items .item h2 {
+  margin: 0.2rem 0;
+  color: var(--color-rose-600);
+}
+.dessert__container-items .item p {
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
