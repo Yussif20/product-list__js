@@ -42,9 +42,11 @@ body {
   font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
   background-color: var(--color-rose-100);
+  color: var(--color-rose-600);
 }
 
 .container {
+  margin: 0 auto;
   padding: 3rem 0;
   max-width: 80%;
   display: flex;
@@ -53,7 +55,6 @@ body {
 }
 
 .dessert__container h1 {
-  color: var(--color-rose-600);
   margin: 1.2rem 0;
   font-size: 3.6rem;
   font-weight: 700;
@@ -104,11 +105,80 @@ body {
 }
 .dessert__container-items .item h2 {
   margin: 0.2rem 0;
-  color: var(--color-rose-600);
 }
 .dessert__container-items .item p {
   font-weight: 700;
   color: var(--color-red);
+}
+
+.cart {
+  background-color: #fff;
+  align-self: flex-start;
+  width: 40rem;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.cart h2 {
+  color: var(--color-red);
+}
+.cart__item {
+  padding: 1.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-rose-300);
+}
+.cart__item--text-name {
+  font-weight: bold;
+}
+.cart__item--text-price {
+  font-size: 1.4rem;
+}
+.cart__item--text-price .quantity {
+  font-weight: bold;
+  color: var(--color-red);
+  margin-right: 1.3rem;
+}
+.cart__item--text-price .item-price {
+  color: var(--color-rose-400);
+  margin-right: 0.8rem;
+}
+.cart__item--text-price .total-price {
+  font-weight: bold;
+  color: var(--color-rose-400);
+}
+.cart__item--icon {
+  outline: 1px solid var(--color-rose-300);
+  border-radius: 100%;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cart__item--icon:hover {
+  outline-color: var(--color-red);
+}
+.cart__total {
+  padding: 1.2rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cart__subtext {
+  font-size: 1.5rem;
+  background-color: var(--color-rose-100);
+  max-width: 95%;
+  align-self: center;
+  padding: 0.8rem 2rem;
+}
+.cart button {
+  background-color: var(--color-red);
+  color: #fff;
+  padding: 1.8rem 2.4rem;
+  border-radius: 4rem;
+  margin-top: 1.2rem;
+  font-weight: bold;
 }
 
 .attribution {

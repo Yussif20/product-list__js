@@ -39,8 +39,10 @@ body {
   font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
   background-color: var(--color-rose-100);
+  color: var(--color-rose-600);
 }
 .container {
+  margin: 0 auto;
   padding: 3rem 0;
   max-width: 80%;
   display: flex;
@@ -50,7 +52,6 @@ body {
 // Dessert Items Styles
 .dessert__container {
   h1 {
-    color: var(--color-rose-600);
     margin: 1.2rem 0;
     font-size: 3.6rem;
     font-weight: 700;
@@ -98,7 +99,6 @@ body {
     }
     h2 {
       margin: 0.2rem 0;
-      color: var(--color-rose-600);
     }
     p {
       font-weight: 700;
@@ -106,7 +106,77 @@ body {
     }
   }
 }
-
+.cart {
+  background-color: #fff;
+  align-self: flex-start;
+  width: 40rem;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  h2 {
+    color: var(--color-red);
+  }
+  &__item {
+    padding: 1.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-rose-300);
+    &--text {
+      &-name {
+        font-weight: bold;
+      }
+      &-price {
+        font-size: 1.4rem;
+        .quantity {
+          font-weight: bold;
+          color: var(--color-red);
+          margin-right: 1.3rem;
+        }
+        .item-price {
+          color: var(--color-rose-400);
+          margin-right: 0.8rem;
+        }
+        .total-price {
+          font-weight: bold;
+          color: var(--color-rose-400);
+        }
+      }
+    }
+    &--icon {
+      outline: 1px solid var(--color-rose-300);
+      border-radius: 100%;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        outline-color: var(--color-red);
+      }
+    }
+  }
+  &__total {
+    padding: 1.2rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtext {
+    font-size: 1.5rem;
+    background-color: var(--color-rose-100);
+    max-width: 95%;
+    align-self: center;
+    padding: 0.8rem 2rem;
+  }
+  button {
+    background-color: var(--color-red);
+    color: #fff;
+    padding: 1.8rem 2.4rem;
+    border-radius: 4rem;
+    margin-top: 1.2rem;
+    font-weight: bold;
+  }
+}
 // Attribution
 .attribution {
   font-size: 11px;
