@@ -12,6 +12,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 800px) {
+  html {
+    font-size: 9px;
+  }
+}
 
 * {
   margin: 0;
@@ -48,10 +53,17 @@ body {
 .container {
   margin: 0 auto;
   padding: 3rem 0;
-  max-width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0;
+    width: 95%;
+    flex-direction: column;
+  }
 }
 
 .dessert__container h1 {
@@ -63,10 +75,21 @@ body {
 .dessert__container-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   -moz-column-gap: 1.4rem;
        column-gap: 1.4rem;
   row-gap: 3rem;
+}
+@media (max-width: 1000px) {
+  .dessert__container-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .dessert__container-items {
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 5rem;
+  }
 }
 .dessert__container-items .item {
   display: flex;
@@ -74,16 +97,23 @@ body {
 }
 .dessert__container-items .item img {
   border-radius: 1.2rem;
-  width: 25rem;
+  width: 100%;
+  position: relative;
+}
+.dessert__container-items .item__image {
+  position: relative;
+  margin-bottom: 3rem;
 }
 .dessert__container-items .item button {
+  transform: translateY(50%) translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
   font-weight: 600;
-  transform: translateY(-50%);
   background-color: white;
   border: 1px solid var(--color-rose-400);
   border-radius: 5rem;
   padding: 0.8rem 1.6rem;
-  margin-left: 4rem;
   width: 16rem;
   display: flex;
   align-items: center;
@@ -117,6 +147,12 @@ body {
   width: 40rem;
   padding: 2rem;
   border-radius: 1.2rem;
+}
+@media (max-width: 700px) {
+  .cart {
+    width: 100%;
+    align-self: center;
+  }
 }
 .cart__full {
   display: flex;
@@ -167,6 +203,9 @@ body {
   padding: 1.2rem 0.8rem;
   display: flex;
   justify-content: space-between;
+}
+.cart__total .total-price {
+  font-weight: bold;
 }
 .cart__subtext {
   font-size: 1.5rem;

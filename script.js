@@ -15,22 +15,21 @@ const updateTotalPrice = () => {
   totalPriceContainer.textContent = `$${total.toFixed(2)}`;
 };
 
-const createItem = (imgDesktop, imgTablet, imgMobile, type, name, price) => {
+const createItem = ( img, type, name, price) => {
   const item =
-    `<div class="item">
-        <picture>
-          <source srcset="${imgMobile}" media="(max-width: 400px)" />
-          <source srcset="${imgTablet}" media="(max-width: 900px)" />
-          <img src="${imgDesktop}" alt="${name}" />
-        </picture>
-        <button class="add-to-cart">
-         <img src="images/icon-add-to-cart.svg" alt="cart icon" />
-         Add to Cart
+    `<div class="item">         
+        <div class="item__image">
+          <img src="${img}" alt="${name}">
+          <button class="add-to-cart">
+              <img src="images/icon-add-to-cart.svg" alt="cart icon" />
+               Add to Cart
         </button>
+        </div>    
         <h4>${type}</h4>
         <h2>${name}</h2>
         <p>$ ${price}</p>
     </div>`;
+
   dessertContainer.insertAdjacentHTML("beforeend", item);
 }
 
@@ -61,8 +60,7 @@ fetch("./data.json").then(res => {
   return res.json()
 }).then(data => {
   // add The Shop Data 
-  data.forEach(item => createItem(item.image.desktop, item.image.tablet, item.image.mobile, item.category, item.name, item.price));
-
+  data.forEach(item => createItem(item.image["tablet"],item.category, item.name, item.price));
   // add event listener to the buttons
   const addButtons = document.querySelectorAll(".add-to-cart");
   addButtons.forEach(btn => {
