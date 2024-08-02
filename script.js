@@ -65,9 +65,14 @@ fetch("./data.json").then(res => {
   const addButtons = document.querySelectorAll(".add-to-cart");
   addButtons.forEach(btn => {
     btn.addEventListener("click", (e) => {
+      
       fullCart.classList.remove("disable");
       emptyCart.classList.add("disable");
       const parentItem = e.target.closest(".item");
+      // btn.classList.add("active")
+      // console.log(parentItem)
+      // console.log(cartItems)
+      console.log(cartItems.itemName)
       const itemName = parentItem.querySelector("h2").textContent;
       const itemPrice = parseFloat(parentItem.querySelector("p").textContent.replace('$', ''));
 

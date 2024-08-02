@@ -48,6 +48,7 @@ body {
   margin: 0 auto;
   padding: 3rem 0;
   width: 90%;
+  gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +60,7 @@ body {
 }
 // Dessert Items Styles
 .dessert__container {
+  flex-basis: 80%;
   h1 {
     margin: 1.2rem 0;
     font-size: 3.6rem;
@@ -112,6 +114,10 @@ body {
       img {
         width: 2rem;
         height: 2rem;
+      }
+      &.active {
+        background-color: var(--color-red);
+        color: var(--color-rose-50);
       }
     }
     h4 {

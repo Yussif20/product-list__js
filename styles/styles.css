@@ -54,6 +54,7 @@ body {
   margin: 0 auto;
   padding: 3rem 0;
   width: 90%;
+  gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +67,9 @@ body {
   }
 }
 
+.dessert__container {
+  flex-basis: 80%;
+}
 .dessert__container h1 {
   margin: 1.2rem 0;
   font-size: 3.6rem;
@@ -127,6 +131,10 @@ body {
 .dessert__container-items .item button img {
   width: 2rem;
   height: 2rem;
+}
+.dessert__container-items .item button.active {
+  background-color: var(--color-red);
+  color: var(--color-rose-50);
 }
 .dessert__container-items .item h4 {
   font-size: 1rem;
